@@ -79,6 +79,8 @@ def repeatreceipts():
         
     #data processing
     rawdata = splitlist(cleanList(loopAllYears(wrappedPlaylists,sp)))
+    for chunk in divide_chunks(raw_data, 20):
+        print(chunk)
     
     #formatting data to get passed into HTML
     def maindata(inputdata):
